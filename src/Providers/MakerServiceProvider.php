@@ -2,7 +2,7 @@
 
 namespace Abedin\Maker\Providers;
 
-use Abedin\Boiler\Commands\MakeModel;
+use Abedin\Maker\Commands\MakeModel;
 use Illuminate\Support\ServiceProvider;
 
 class MakerServiceProvider extends ServiceProvider

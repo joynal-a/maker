@@ -19,7 +19,7 @@ class Repository
 $repositoryClass = "<?php
 namespace App\Repositories;
 
-use Abedin\Boiler\Repositories\Repository;
+use Abedin\Maker\Repositories\Repository;
 use App\Models\\$className;
 
 class {$className}Repository extends Repository
