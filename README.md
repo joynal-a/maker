@@ -10,7 +10,7 @@
 Laravel Boiler Template is an elegant starting point for Laravel applications, meticulously crafted to provide a pre-configured structure, a sophisticated authentication system, and essential functionalities. Propel your projects forward with this carefully designed foundation.
 
 ## 🌟 Requirements
-- **PHP** ^8.1
+- **PHP** ^8.0
 - **Laravel** ^10
 
 ## ✨ Suggestion
