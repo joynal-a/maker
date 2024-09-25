@@ -7,7 +7,6 @@ use Illuminate\Support\ServiceProvider;
 
 class MakerServiceProvider extends ServiceProvider
 {
-
     /**
      * Register any application services.
      */
