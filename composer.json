@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Abedin\\Boiler\\Providers\\MakerServiceProvider"
+                "Abedin\\Maker\\Providers\\MakerServiceProvider"
             ]
         }
     }
