@@ -18,7 +18,6 @@ class MakeRepository extends Command
     // Execute the console command.
     public function handle(): void
     {
-
         if($this->option('all')){
             $models = Model::existsModels();
             $this->make($models);
@@ -40,6 +39,7 @@ class MakeRepository extends Command
     {
         $existsRepositories = Repository::existsRepositories();
         foreach ($models as $modelName) {
+            $modelName = ucfirst($modelName);
             if(!in_array($modelName . 'Repository', $existsRepositories)){
                 Repository::generate($modelName);
             }
