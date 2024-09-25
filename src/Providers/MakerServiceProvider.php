@@ -14,6 +14,7 @@ class MakerServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->registerNewModelCommand();
+        $this->registerNewRepositoryCommand();
     }
 
     protected function registerNewModelCommand(): void

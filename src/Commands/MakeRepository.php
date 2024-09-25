@@ -5,7 +5,6 @@ namespace Abedin\Maker\Commands;
 use Abedin\Maker\Lib\Generator\Model;
 use Abedin\Maker\Lib\Generator\Repository;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Artisan;
 
 class MakeRepository extends Command
 {
@@ -26,7 +25,7 @@ class MakeRepository extends Command
         }else{
             // Get the repository names
             $this->info('==> Please enter the name of the model or models you want to create a repository for.');
-            $models = $this->ask('Enter Repository/Repositorys Name');
+            $models = $this->ask('Enter Model/Models Name');
 
             if(!is_array($models)){
                 $models = [$models];
