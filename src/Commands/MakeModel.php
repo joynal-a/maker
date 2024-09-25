@@ -24,21 +24,21 @@ class MakeModel extends Command
         $name = $this->argument('name');
 
         // Run the default make:model command
-        Artisan::call('make:model', ['name' => $name]);
+        // Artisan::call('make:model', ['name' => $name]);
 
         // Check if -m option is passed
         if ($this->option('migration')) {
-            Artisan::call('make:migration', ['name' => "create_{$name}_table"]);
+            // Artisan::call('make:migration', ['name' => "create_{$name}_table"]);
             $this->info("Migration created for model {$name}");
         }
 
         // Check if -c option is passed
         if ($this->option('controller')) {
             if ($this->option('resource')) {
-                Artisan::call('make:controller', ['name' => "{$name}Controller", '--resource' => true]);
+                // Artisan::call('make:controller', ['name' => "{$name}Controller", '--resource' => true]);
                 $this->info("Resource Controller created for model {$name}");
             } else {
-                Artisan::call('make:controller', ['name' => "{$name}Controller"]);
+                // Artisan::call('make:controller', ['name' => "{$name}Controller"]);
                 $this->info("Controller created for model {$name}");
             }
         }
