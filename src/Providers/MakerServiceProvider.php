@@ -1,6 +1,6 @@
 <?php
 
-namespace Abedin\Boiler\Providers;
+namespace Abedin\Maker\Providers;
 
 use Abedin\Boiler\Commands\MakeModel;
 use Illuminate\Support\ServiceProvider;

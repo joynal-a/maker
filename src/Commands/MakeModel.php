@@ -1,9 +1,9 @@
 <?php
 
-namespace Abedin\Boiler\Commands;
+namespace Abedin\Maker\Commands;
 
-use Abedin\Boiler\Lib\Generator\Model;
-use Abedin\Boiler\Lib\Generator\Repository;
+use Abedin\Maker\Lib\Generator\Model;
+use Abedin\Maker\Lib\Generator\Repository;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 

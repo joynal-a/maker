@@ -1,6 +1,6 @@
 <?php
 
-namespace Abedin\Boiler\Repositories;
+namespace Abedin\Maker\Repositories;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;

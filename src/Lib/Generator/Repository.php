@@ -1,6 +1,6 @@
 <?php
 
-namespace Abedin\Boiler\Lib\Generator;
+namespace Abedin\Maker\Lib\Generator;
 
 class Repository 
 {
