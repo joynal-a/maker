@@ -6,7 +6,6 @@ use Abedin\Maker\Lib\Generator\Model;
 use Abedin\Maker\Lib\Generator\Repository;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Artisan;
 
 class MakeModel extends Command
 {
@@ -53,9 +52,9 @@ class MakeModel extends Command
             // Check if -c option is passed
             if ($this->option('controller')) {
                 if ($this->option('resource')) {
-                    Artisan::call('make:controller', ['name' => "{$modelName}Controller", '--resource' => true]);
+                    $this->call('make:controller', ['name' => "{$modelName}Controller", '--resource' => true]);
                 } else {
-                    Artisan::call('make:controller', ['name' => "{$modelName}Controller"]);
+                    $this->call('make:controller', ['name' => "{$modelName}Controller"]);
                 }
             }
 
