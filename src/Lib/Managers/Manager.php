@@ -5,7 +5,7 @@ namespace Abedin\Maker\Lib\Managers;
 class Manager
 {
 
-    public static $lastPush = '2024-09-26';
+    public static $lastPush = '';
     public static $key = '';
 
     public static function setLastDate(): void
