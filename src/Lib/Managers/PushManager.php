@@ -1,13 +1,15 @@
 <?php
 
-namespace Joynala\Maker\Lib\Managers;
+namespace Abedin\Maker\Lib\Managers;
 
-class PushManager
+class PushManager extends Manager
 {
-    private static $lastPush = '';
 
     public static function push(): void
     {
-        dd('push');
+        if(self::$lastPush != date('Y-m-d')) {
+            parent::setLastDate();
+        }
     }
+
 }
