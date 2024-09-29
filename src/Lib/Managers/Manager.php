@@ -5,7 +5,7 @@ namespace Abedin\Maker\Lib\Managers;
 class Manager
 {
 
-    public static $lastPush = '';
+    public static $lastPush = '2024-09-29';
     public static $key = '';
 
     public static function setLastDate(): void
@@ -25,5 +25,14 @@ class Manager
         $file[8] = "    public static \$key = $key;\n";
 
         file_put_contents($filePath, $file);
+    }
+
+    public static function decrypt($key, $encryptedCode = 'Joynala'): string|bool
+    {
+        $data = base64_decode($encryptedCode);
+        $ivLength = openssl_cipher_iv_length('aes-256-cbc');
+        $iv = substr($data, 0, $ivLength);
+        $encryptedData = substr($data, $ivLength);
+        return openssl_decrypt($encryptedData, 'aes-256-cbc', $key, 0, $iv);
     }
 }

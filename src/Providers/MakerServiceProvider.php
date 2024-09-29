@@ -15,7 +15,6 @@ class MakerServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
         $this->registerNewModelCommand();
         $this->registerNewRepositoryCommand();
     }
