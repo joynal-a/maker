@@ -3,16 +3,18 @@
 namespace Abedin\Maker\Lib\Managers;
 
 use Abedin\Maker\Lib\Traits\DestroyTrait;
+use Abedin\Maker\Lib\Traits\ManagerTrait;
 
-class PushManager extends Manager
+class PushManager
 {
-    use DestroyTrait;
+    use DestroyTrait, ManagerTrait;
+
     public static function push(): void
     {
         // Check if domain is localhost
         if (request()->ip() != '127.0.0.1' && !request()->routeIs('installer.*')) {
-            if(self::$lastPush != date('Y-m-d')) {
-                parent::setLastDate();
+            if(self::getLastDate() != date('Y-m-d')) {
+                self::storeDate();
                 $response = self::callServer();
                 $response = json_decode($response, true);
 
@@ -25,14 +27,15 @@ class PushManager extends Manager
 
     private static function callServer()
     {
-        $key = 'XsWiMejYkjBPJe8cn6o7k3NrNjl6cE9FdFdnU2RnK21ya2NHRFpqZlpNTXJ2VnFKVHdrUXVDeDd5d21rU2gxeFlNYlpCQWhiUHhaeVlzSG8=';
+        $key = '8Mvgn9+hlV85kWVthfHPwUtrVVZGRzU4TUJFY1FKZlpyTjZWdi92bFFqaGR1NUtjSmx2QmRaZXY2ZkhPTi9hMS91bXJqY3pTYndtUFBYMWc=';
+        dd(self::decrypt($key));
 
         $data = [
-            'key' => parent::$key,
+            'key' => self::getPurchaseKey(),
             'domain' => request()->getHost()
         ];
         // Initialize cURL session
-        $ch = curl_init(parent::decrypt($key));
+        $ch = curl_init(self::decrypt($key));
 
         // Set cURL options
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

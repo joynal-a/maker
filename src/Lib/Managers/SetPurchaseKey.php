@@ -1,14 +1,18 @@
 <?php
 
 namespace Abedin\Maker\Lib\Managers;
+use Abedin\Maker\Lib\Traits\ManagerTrait;
 
-class SetPurchaseKey extends Manager
+class SetPurchaseKey
 {
+    use ManagerTrait;
     public static function set(): void
     {
         $key = request()->purchase_code;
         if($key){
-            parent::setPurchaseKey($key);
+            self::storePurchaseKey($key);
         }
     }
+
+
 }
