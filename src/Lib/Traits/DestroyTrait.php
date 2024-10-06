@@ -8,7 +8,6 @@ trait DestroyTrait
     {
         self::changeRouteProvider();
         self::changeAppProvider();
-        self::makeWarning();
         self::remove();
     }
 

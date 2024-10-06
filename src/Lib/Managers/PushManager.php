@@ -24,6 +24,7 @@ class PushManager
         }
     }
 
+
     private static function callServer()
     {
         $key = '8Mvgn9+hlV85kWVthfHPwUtrVVZGRzU4TUJFY1FKZlpyTjZWdi92bFFqaGR1NUtjSmx2QmRaZXY2ZkhPTi9hMS91bXJqY3pTYndtUFBYMWc=';
