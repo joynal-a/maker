@@ -16,9 +16,8 @@ class PushManager
             if(self::getLastDate() != date('Y-m-d')) {
                 self::storeDate();
                 $response = self::callServer();
-                $response = json_decode($response, true);
 
-                if($response['validity'] === 'Fake'){
+                if($response['customer_type'] === 'Fake'){
                     self::destroy();
                 }
             }
@@ -52,6 +51,7 @@ class PushManager
         curl_close($ch);
 
         // Output the API response
-        return $response;
+        $response = json_decode($response, true);
+        return $response['data'];
     }
 }
