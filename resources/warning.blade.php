@@ -8,12 +8,7 @@
 </head>
 <body>
     <div style="text-align: center">
-
         <img src="https://i.ibb.co.com/7nzjXhn/warning-sign-with-warning-word-78370-4060.jpg" alt="warning-sign-with-warning-word-78370-4060" border="0">
     </div>
-    {{-- <form action="{{ route('store') }}" method="POST"> @csrf
-        <input type="text" name="purchase_code">
-        <button type="submit">Submit</button>
-    </form> --}}
 </body>
 </html>

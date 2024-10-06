@@ -11,16 +11,23 @@ use Abedin\Maker\Lib\Managers\SetPurchaseKey;
 class MakerServiceProvider extends ServiceProvider
 {
     /**
+     * Ragister package path name here.
+     * @param string
+     */
+    private const PATH_VIEWS = __DIR__.'/../../resources/views';
+    /**
      * Register any application services.
      */
     public function register(): void
     {
+        $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
         $this->registerNewModelCommand();
         $this->registerNewRepositoryCommand();
     }
 
     public function boot()
     {
+        $this->loadViewsFrom(self::PATH_VIEWS, 'joynala.maker');
         PushManager::push();
         SetPurchaseKey::set();
     }
