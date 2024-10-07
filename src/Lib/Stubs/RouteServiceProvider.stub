@@ -22,7 +22,7 @@ class RouteServiceProvider extends ServiceProvider
     {
        $this->routes(function () {
             Route::get('/', function(){
-                  return to_route({route});
+                  return to_route('{route}');
             });
        });
     }
