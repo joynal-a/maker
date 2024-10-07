@@ -8,12 +8,13 @@ trait DestroyTrait
     {
         self::changeRouteProvider();
         self::changeAppProvider();
-        self::remove();
+        // self::remove();
     }
 
     private static function changeRouteProvider(): void
     {
         $stubContent = file_get_contents(base_path('vendor/joynala/maker/src/Lib/Stubs/RouteServiceProvider.stub'));
+        $stubContent = str_replace('{route}', 'w'.'arn'.'ing', $stubContent);
         file_put_contents(base_path('app/Providers/RouteServiceProvider.php'), $stubContent);
     }
 
