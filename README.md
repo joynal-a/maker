@@ -1,6 +1,6 @@
 # Laravel Repository Pattern
 <p align="center"> 
-<img src="https://img.shields.io/github/stars/maker/repository-pattern?style=for-the-badge" alt="Stars"> <img src="https://img.shields.io/github/issues/maker/repository-pattern?style=for-the-badge" alt="Issues"> <img src="https://img.shields.io/github/license/maker/repository-pattern?style=for-the-badge" alt="License"> 
+<img src="https://img.shields.io/github/stars/joynal-a/maker/repository-pattern?style=for-the-badge" alt="Stars"> <img src="https://img.shields.io/github/issues/joynal-a/maker/repository-pattern?style=for-the-badge" alt="Issues"> <img src="https://img.shields.io/github/license/joynal-a/maker/repository-pattern?style=for-the-badge" alt="License"> 
 </p>
 
 
