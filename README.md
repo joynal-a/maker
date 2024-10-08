@@ -1,10 +1,10 @@
 # Laravel Repository Pattern
-<p align="center"> 
+
 ![GitHub issues](https://img.shields.io/github/issues/joynal-a/maker?style=flat-square)
 ![GitHub forks](https://img.shields.io/github/forks/joynal-a/maker?style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/joynal-a/maker?style=flat-square)
 ![GitHub license](https://img.shields.io/github/license/joynal-a/maker?style=flat-square)
-</p>
+
 
 
 ## 🚀 Overview
