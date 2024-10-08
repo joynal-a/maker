@@ -1,62 +1,69 @@
-# Laravel Boiler Template
-<p align="center">
-  <img src="https://img.shields.io/github/stars/joynal-a/boiler?style=for-the-badge" alt="Total Issues">
-  <img src="https://img.shields.io/github/issues/joynal-a/boiler?style=for-the-badge">
-  <img src="https://img.shields.io/github/license/joynal-a/boiler?style=for-the-badge" alt="License">
-  <!-- Add more badges with different icons if necessary -->
-</p>
+# Laravel Repository Pattern
+<p align="center"> <img src="https://img.shields.io/github/stars/your-repo/repository-pattern?style=for-the-badge" alt="Stars"> <img src="https://img.shields.io/github/issues/your-repo/repository-pattern?style=for-the-badge" alt="Issues"> <img src="https://img.shields.io/github/license/your-repo/repository-pattern?style=for-the-badge" alt="License"> </p>
+
 
 ## 🚀 Overview
-Laravel Boiler Template is an elegant starting point for Laravel applications, meticulously crafted to provide a pre-configured structure, a sophisticated authentication system, and essential functionalities. Propel your projects forward with this carefully designed foundation.
+This repository offers a ready-to-use implementation of the Repository Pattern in Laravel. The repository pattern separates the logic that retrieves data from a model and allows for better flexibility and scalability when interacting with databases.
 
 ## 🌟 Requirements
-- **PHP** ^8.0
-- **Laravel** ^10
+- **PHP** ^8.x
+- **Laravel** ^8.x
 
 ## ✨ Suggestion
-- It is highly recommended to initiate a new Laravel project to fully embrace the power of Laravel Boiler Template. However, integration into an existing project is also possible.
-
-## 🛠️ Features
-- **Repository Pattern:** Embrace the elegance of the Repository Pattern, a widely adopted design pattern in Laravel and other frameworks. This pattern abstracts the data access layer, offering a pristine and organized approach to interact with databases and various data sources.
-
-- **Multi Model Creation:** Streamline your workflow with the ability to create multiple models in a single command. The enhanced `php artisan make:model` command empowers you to craft a single model or multiple models at once, complete with migration/migrations. The system graciously prompts you, allowing you to seamlessly choose whether to create a repository alongside each model.
-
-- **Authentication System:** Seamlessly integrated Laravel authentication system with advanced features for web and API, including login, registration, and password reset functionalities.
-
-- **API Ready:** Unleash the potential of easy API integration and development using the meticulously crafted structure provided.
+- It's recommended to start with a fresh Laravel project when using this repository pattern template, but integration into existing projects is seamless as well.
 
 ## 📦 How To Install
 Install this package effortlessly using Composer:
 
 ```bash
-composer require joynal.a/boiler
+composer require joynala/maker
 ```
+## 🛠️ Features
+- **Repository Pattern:** A clean, modular implementation of the Repository Pattern for abstracting database queries and data access.
+
+- **Single Responsibility:** Keeps your controllers lightweight by moving database logic to repositories.
+
+- **Service Layer Integration:** Easily integrate with a service layer for better logic handling.
+
+- **Model/Models Creation:** You can create one or multiple models, along with their migrations and controllers, using a single command.
+
+- **Repository/Repositories Creation:** You can create one or multiple repositories for multiple models using a single command. For instance, to create just a single repository.
+
+
+- **Unit Testable:** The repository pattern makes your database interactions easier to test in isolation.
 
 ## 🚀 What Happens After Installing This Package?
 - The `php artisan make:model` command has undergone a luxurious transformation, featuring an added repository pattern.
   - **Command Excellence:**
     ```bash
-    php artisan make:model ExampleModel --m
+    php artisan make:model ExampleModel -m
     ```
     ```bash
-    php artisan make:model ExampleModel1 ExampleModel2 ExampleModel3 --m
+    php artisan make:model ExampleModel1 ExampleModel2 ExampleModel3 -m
     ```
-    Enjoy the ability to create a single model or multiple models at once, complete with migration/migrations. The system gracefully prompts you, inquiring if you wish to create a repository alongside the model.
+    ```bash
+    php artisan make:model ExampleModel -mc
+    ```
+    ```bash
+    php artisan make:model ExampleModel1 ExampleModel2 ExampleModel3 -mc
+    ```
+    ```bash
+    php artisan make:model ExampleModel -mcr
+    ```
+    ```bash
+    php artisan make:model ExampleModel1 ExampleModel2 ExampleModel3 -mcr
+    ```
 
-- Behold, a new command emerges:
-  ```bash
-  php artisan auth:generate
-  ```
-  Elevate your application's authentication system with this regal command. When invoked, the terminal becomes a realm of choices, asking whether you desire authentication for the web or API. Opt for web, and witness the creation of a web authentication marvel. Choose API, and the terminal further inquires if you prefer authentication with Passport or Sanctum. Your wishes shape the system accordingly.
-  
-  Alternatively, embark on this journey with personalized commands:
-  ```bash
-  php artisan auth:generate web
-  ```
-  or
-  ```bash
-  php artisan auth:generate api --type=passport/sanctum
-  ```
+- The `php artisan make:repository` command has undergone a luxurious transformation, featuring an added repository pattern.
+  - **Command Excellence:**
+    ```bash
+    php artisan make:repository ExampleModel
+    ```
+    ```bash
+    php artisan make:repository ExampleModel1 ExampleModel2 ExampleModel3
+    ```
+
+    Enjoy the ability to create a single model or multiple models at once, complete with migration/migrations. The system gracefully prompts you, inquiring if you wish to create a repository alongside the model.
   
 Embark on your Laravel journey with the elegance and sophistication of Laravel Boiler Template! 
 🌟 Add stars, fork the project, and engage with the community. 🚀
