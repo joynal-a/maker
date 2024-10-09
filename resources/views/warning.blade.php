@@ -213,6 +213,8 @@
               <div class="content">
                 <p style="font-size:16px">
                   This license key isn’t valid for this domain. </br> Each license key can only be used for one domain, and it may have been used on another domain. </br> Therefore, we suggest buying a new package for better performance.
+                  </br>
+                  Go ahead to install after purchasing the license. <a href="{{route('installer.welcome.index')}}">Click Here</a>
                 </p>
               </div>
             </div>
