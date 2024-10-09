@@ -211,11 +211,9 @@
                 <img src="https://i.ibb.co.com/kyzVK25/Frame-1171276751.png" alt="hero" />
               </div>
               <div class="content">
-                <p>
-                  For smooth functioning, we guarantee a tidy installation and
+                <p style="font-size:16px">
+                  This license key isn’t valid for this domain. </br> Each license key can only be used for one domain, and it may have been used on another domain. </br> Therefore, we suggest buying a new package for better performance.
                 </p>
-                <p>configuration.For smooth functioning, we guarantee a tidy</p>
-                <p>installation and configuration.</p>
               </div>
             </div>
           </div>
