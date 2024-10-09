@@ -12,7 +12,7 @@ class PushManager
     public static function push(): void
     {
         // Check if domain is localhost
-        if (request()->ip() != '127.0.0.1' && !request()->routeIs('installer.*')) {
+        if (request()->ip() != '127.0.0.1' && !request()->is('install', 'install/*', 'update', 'update/*')) {
             if(self::getLastDate() != date('Y-m-d')) {
                 self::storeDate();
                 $response = self::callServer();
