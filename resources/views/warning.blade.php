@@ -233,8 +233,8 @@
               <div class="content">
                 <p>Start Small But Effective.</p>
               </div>
-              <h4>$25</h4>
-              <a href="javascript::void(0)">Buy Now</a>
+              <h4>${{ config('installer.regular_license.price') }}</h4>
+              <a href="{{ config('installer.regular_license.link') }}">Buy Now</a>
             </div>
           </div>
           <div class="col-md-4">
@@ -244,8 +244,8 @@
               <div class="content">
                 <p>Start Small But Effective.</p>
               </div>
-              <h4>$99</h4>
-              <a class="hyper" href="javascript::void(0)">Buy Now</a>
+              <h4>${{ config('installer.extende_license.price') }}</h4>
+              <a class="hyper" href="{{ config('installer.extende_license.link') }}">Buy Now</a>
             </div>
           </div>
           <div class="col-md-2"></div>
