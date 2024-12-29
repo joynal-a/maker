@@ -4,12 +4,13 @@ namespace Abedin\Maker\Lib\Traits;
 
 trait ManagerTrait
 {
+    private static $daFormat = 'YmdH';
     public static function getLastDate(): string
     {
 
         $filePath = storage_path('r'.'a'.'cord.'.'txt');
         if(!file_exists(filename: $filePath)){
-            return now()->subDay()->format('Y-m-d');
+            return now()->subDay()->format(self::$daFormat);
         }
         try{
             $file = file($filePath);
@@ -17,7 +18,7 @@ trait ManagerTrait
             $date = self::decrypt($date);
             return $date;
         } catch (\Exception $e){}
-        return now()->subDay()->format('Y-m-d');
+        return now()->subDay()->format(self::$daFormat);
     }
 
     public static function getPurchaseKey(): string|null
@@ -40,7 +41,7 @@ trait ManagerTrait
         $filePath = self::findOrCreateFile();
         $file = file($filePath);
 
-        $date = date('Y-m-d');
+        $date = date(self::$daFormat);
         $date = self::encript($date);
 
         $file[1] = "$date\n";

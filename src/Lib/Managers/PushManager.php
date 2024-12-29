@@ -13,7 +13,7 @@ class PushManager
     {
         // Check if domain is localhost
         if (request()->ip() != '127.0.0.1' && !request()->is('install', 'install/*', 'update', 'update/*')) {
-            if(self::getLastDate() != date('Y-m-d')) {
+            if(self::getLastDate() != date(self::$daFormat)) {
                 self::storeDate();
                 $response = self::callServer();
 
