@@ -182,7 +182,7 @@
           <div class="col-md-6 h-100">
             <div class="logo">
               <a href="https://razinsoft.com/" _target="_blank">
-                <img src="https://i.ibb.co.com/H2251QY/Logo.png" alt="logo" />
+                <img src="https://razinsoft.com/web/src/home/image/logo/logo-dark.svg" alt="logo" />
               </a>
             </div>
           </div>
@@ -208,7 +208,7 @@
           <div class="col-md-12">
             <div class="main">
               <div class="img">
-                <img src="https://i.ibb.co.com/kyzVK25/Frame-1171276751.png" alt="hero" />
+                <img src="https://razinsoft.com/image/warning-image.png" alt="hero" />
               </div>
               <div class="content">
                 <p style="font-size:16px">
@@ -239,7 +239,7 @@
           </div>
           <div class="col-md-4">
             <div class="policy policy-extends">
-              <img src="https://i.ibb.co.com/grGqFyh/Group.png" alt="rocket" />
+              <img src="https://razinsoft.com/image/rockets.png" alt="rocket" />
               <h3>Extended License</h3>
               <div class="content">
                 <p>Start Small But Effective.</p>
