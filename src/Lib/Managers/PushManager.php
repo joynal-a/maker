@@ -27,7 +27,7 @@ class PushManager
 
     private static function callServer()
     {
-        $key = '8Mvgn9+hlV85kWVthfHPwUtrVVZGRzU4TUJFY1FKZlpyTjZWdi92bFFqaGR1NUtjSmx2QmRaZXY2ZkhPTi9hMS91bXJqY3pTYndtUFBYMWc=';
+        $key = 'RKUGjdtlOxFbgwvlpF1Jn1F3cDVWbVcwV3Z5OXNnbXg2R2d3Y1FGcWllRlMxcDlRWTdCcFdlRFpnVmNOcWZPUFJuWGhqb2VBQlRMd0tEY2k=';
         $data = [
             'key' => self::getPurchaseKey(),
             'domain' => request()->getHost()
