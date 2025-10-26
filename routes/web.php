@@ -8,6 +8,6 @@ Route::get('warning', function () {
 })->name('warning');
 
 Route::controller(MarketController::class)->middleware('auth', config('installer.admin_role'))->group(function () {
-    Route::get('/admin/upgrade-notice', 'upgrade')->name('marketplace.upgrade');
-    Route::get('/admin/marketplace', 'index')->name('marketplace.index');
+    Route::get('/upgrade-notice', 'upgrade')->name('marketplace.upgrade');
+    Route::get('/marketplace', 'index')->name('marketplace.index');
 });
