@@ -1,9 +1,7 @@
-@extends('layouts.app')
-
-@section('header-title', __('Marketplace'))
-@section('header-subtitle', __('Our all products'))
-
-@section('content')
+@php
+    $response = Http::get('http://razinsoft.test/api/envato-products/' . config('installer.productId'));
+    $products = $response->json()['data'];
+@endphp
     <section class="support_container">
         <header class="page_header">
             <div class=" border-b">
@@ -1468,4 +1466,3 @@
             }
         }
     </style>
-@endsection
