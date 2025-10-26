@@ -11,21 +11,6 @@
         $logs = json_decode($logContent, true);
     }
 @endphp
-    <section class="support_container">
-        <header class="page_header">
-            <div class=" border-b">
-                <p class="header_title">Product Support</p>
-
-                <button class="common_btn">Get Support</button>
-            </div>
-
-            <!-- tabs  -->
-            <div class="tab_container">
-                <button class="btn_tab btn_tab_active">Product Update</button>
-                <a href="{{ route('marketplace.index') }}" class="btn_tab">Marketplace </a>
-            </div>
-        </header>
-
         <!-- update section  -->
          <section class="update_section_container">
             @if ($data['is_expired'])
@@ -121,8 +106,6 @@
             </div>
          </section>
 
-
-    </section>
     <style>
 
 
