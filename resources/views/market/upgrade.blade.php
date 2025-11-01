@@ -1,10 +1,10 @@
 @php
-    $response = Http::post('http://razinsoft.test/api/check/product-update/' . config('installer.productId'), [
+    $response = Http::post('http://admin.razinsoft.com/api/check/product-update/' . config('installer.productId'), [
         'key' => Abedin\Maker\Lib\Traits\ManagerTrait::getPurchaseKey(),
     ]);
     $data = $response->json()['data'];
 
-    $logPath = storage_path('logs/change.json');
+    $logPath = storage_path('change.json');
     $logs = [];
     if (file_exists($logPath)) {
         $logContent = file_get_contents($logPath);
