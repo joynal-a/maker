@@ -1,5 +1,5 @@
 @php
-    $response = Http::post('http://admin.razinsoft.com/api/check/product-update/' . config('installer.productId'), [
+    $response = Http::post('https://products.razinsoft.com/api/check/product-update/' . config('installer.productId'), [
         'key' => Abedin\Maker\Lib\Traits\ManagerTrait::getPurchaseKey(),
     ]);
     $data = $response->json()['data'];

@@ -1,5 +1,5 @@
 @php
-    $response = Http::get('http://admin.razinsoft.com/api/envato-products/' . config('installer.productId'));
+    $response = Http::get('https://products.razinsoft.com/envato-products/' . config('installer.productId'));
     $products = $response->json()['data'];
 @endphp
 <!-- marketplace section  -->
