@@ -1,5 +1,5 @@
 @php
-    $response = Http::post('https://products.razinsoft.com/api/check/product-update/' . config('installer.productId'), [
+    $response = Http::post('https://products.razinsoft.com/fetch-update/' . config('installer.productId'), [
         'key' => Abedin\Maker\Lib\Traits\ManagerTrait::getPurchaseKey(),
     ]);
     $data = $response->json()['data'];
@@ -58,7 +58,7 @@
                             Version: {{ $data['version'] }}
                         </button>
                     </div>
-                    <a href="{{ route('updater.index') }}">
+                    <a class=" common_btn" style="margin-left: auto" type="btn" href="{{ route('updater.index') }}">
                         <img src="{{ asset('assets/icons-admin/download2.svg') }}" alt="">
                         Update Now
                     </a>
@@ -108,4 +108,3 @@
         </div>
     </div>
 </section>
-
